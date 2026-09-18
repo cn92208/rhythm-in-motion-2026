@@ -7,6 +7,6 @@ window.RIM_CONFIG = Object.freeze({
 
   capacity: 50,
   eventId: "rim-2026-11-28",
-  organizerEmail: "cn922082000@gmail.com",
+  organizerEmail: "yichengstudio@gmail.com",
   lastUpdated: "2026-09-18"
 });

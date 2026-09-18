@@ -44,7 +44,7 @@ python -m http.server 8080
 2. 編輯 `site/config.js`：
    - `endpoint`：貼上以 `/exec` 結尾的 Web App 網址。
    - `status`：由 `preview` 改為 `open`。
-   - `organizerEmail`：已設定為 `cn922082000@gmail.com`。
+   - `organizerEmail`：已設定為 `yichengstudio@gmail.com`。
 3. 完成 1 人、2 人、候補、重複送出與確認信測試。
 4. 刪除測試資料後再公開網址。
 
@@ -83,4 +83,4 @@ Word 文件由 `docx` 產生。Windows 有 Microsoft Word 時，可用 `verifica
 - 正式資料寫入主辦人指定的 Google 試算表。
 - 試算表不得設為公開連結可檢視。
 - 活動後 30 日內由 Apps Script 清除姓名、同行者、電話、Email、協助需求與提問。
-- 主辦聯絡信箱為 `cn922082000@gmail.com`，供查詢、更正、取消與刪除申請。
+- 主辦聯絡信箱為 `yichengstudio@gmail.com`，供查詢、更正、取消與刪除申請。
