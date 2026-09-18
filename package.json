@@ -1,0 +1,12 @@
+{
+  "name": "rhythm-in-motion-2026-deliverables",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Rhythm in Motion 2026 proposal and registration site",
+  "scripts": {
+    "build:docx": "node scripts/build-docx.js"
+  },
+  "dependencies": {
+    "docx": "^9.5.1"
+  }
+}
