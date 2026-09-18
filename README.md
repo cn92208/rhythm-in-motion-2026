@@ -2,6 +2,11 @@
 
 《Rhythm in Motion｜把節奏裝進身體》跨界音樂與肢體藝術分享會的正式企畫書、線上報名頁與 Google Apps Script 收件後端。
 
+- **GitHub Pages：** https://cn92208.github.io/rhythm-in-motion-2026/
+- **Repository：** https://github.com/cn92208/rhythm-in-motion-2026
+
+> 公開頁目前採 `preview` 模式：可完整試填，但不會傳送或儲存個資。完成 Google Apps Script 部署及真實收件驗收後，才可將 `site/config.js` 改為 `open`。
+
 ## 交付內容
 
 | 檔案／資料夾 | 用途 |
