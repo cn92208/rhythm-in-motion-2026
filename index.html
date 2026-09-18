@@ -1,0 +1,1120 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="《Rhythm in Motion｜把節奏裝進身體》爵士鼓律動與肢體表達經驗分享會線上報名。2026 年 11 月 28 日，C-LAB 多功能廳。">
+  <meta name="theme-color" content="#f6f2e9">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="zh_TW">
+  <meta property="og:title" content="Rhythm in Motion｜把節奏裝進身體">
+  <meta property="og:description" content="身體打擊 × 聽覺對話。60 分鐘感受 Groove、聲音動態與群體共鳴。">
+  <title>線上報名｜Rhythm in Motion｜把節奏裝進身體</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23f6f2e9'/%3E%3Ccircle cx='17' cy='32' r='7' fill='%23ad4f30'/%3E%3Ccircle cx='32' cy='32' r='7' fill='none' stroke='%23ad4f30' stroke-width='4'/%3E%3Ccircle cx='47' cy='32' r='7' fill='%2364715e'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&family=Noto+Serif+TC:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      color-scheme: light;
+      --paper: #f6f2e9;
+      --paper-deep: #ebe3d6;
+      --surface: #fffdf8;
+      --surface-soft: #fbf7ef;
+      --ink: #292824;
+      --muted: #686259;
+      --quiet: #756e64;
+      --line: #d8cebf;
+      --line-strong: #b9ad9c;
+      --terracotta: #ad4f30;
+      --terracotta-dark: #914126;
+      --terracotta-soft: #f3ded4;
+      --sage: #64715e;
+      --sage-dark: #45513f;
+      --sage-soft: #e3e8df;
+      --warning: #7b541d;
+      --warning-soft: #f3e6c9;
+      --danger: #a43c32;
+      --danger-soft: #f7e1de;
+      --focus: #1769aa;
+      --shadow: 0 18px 55px rgba(65, 51, 37, .09);
+      --serif: "Noto Serif TC", "PMingLiU", serif;
+      --sans: "Noto Sans TC", "Microsoft JhengHei", system-ui, sans-serif;
+      --max: 1160px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      min-width: 320px;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: var(--sans);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+    button, input, textarea, select { font: inherit; }
+    a { color: inherit; text-underline-offset: .2em; }
+    a:hover { color: var(--terracotta-dark); }
+    img, svg { max-width: 100%; }
+    [hidden] { display: none !important; }
+
+    .skip-link {
+      position: fixed;
+      left: 16px;
+      top: 12px;
+      z-index: 100;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      overflow: hidden;
+      clip-path: inset(50%);
+      white-space: nowrap;
+      padding: 10px 14px;
+      border-radius: 8px;
+      background: var(--ink);
+      color: white;
+      font-weight: 700;
+    }
+    .skip-link:focus {
+      width: auto;
+      height: auto;
+      overflow: visible;
+      clip-path: none;
+      white-space: normal;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      border-bottom: 1px solid color-mix(in srgb, var(--line) 78%, transparent);
+      background: rgba(246, 242, 233, .94);
+      backdrop-filter: blur(12px);
+    }
+    .topbar-inner {
+      max-width: var(--max);
+      min-height: 68px;
+      margin: 0 auto;
+      padding: 0 28px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+    .wordmark {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .2em;
+    }
+    .wordmark-beats { display: inline-flex; gap: 5px; align-items: center; }
+    .wordmark-beats i {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      display: block;
+      background: var(--terracotta);
+    }
+    .wordmark-beats i:nth-child(even) {
+      background: transparent;
+      border: 1.5px solid var(--terracotta);
+    }
+    .status-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      min-height: 34px;
+      padding: 6px 11px;
+      border: 1px solid var(--line-strong);
+      border-radius: 999px;
+      color: var(--muted);
+      background: var(--surface-soft);
+      font-size: 13px;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+    .status-pill::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--quiet);
+    }
+    .status-pill[data-state="open"] { color: var(--sage-dark); border-color: #9aa891; background: var(--sage-soft); }
+    .status-pill[data-state="open"]::before { background: var(--sage); box-shadow: 0 0 0 4px rgba(100, 113, 94, .13); }
+    .status-pill[data-state="preview"] { color: var(--warning); border-color: #d3b97c; background: var(--warning-soft); }
+    .status-pill[data-state="preview"]::before { background: #ad762a; }
+    .status-pill[data-state="closed"] { color: var(--danger); border-color: #db9f98; background: var(--danger-soft); }
+    .status-pill[data-state="closed"]::before { background: var(--danger); }
+
+    main { overflow: clip; }
+    .intro-wrap {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 76px 28px 50px;
+    }
+    .event-intro {
+      display: grid;
+      grid-template-columns: minmax(0, 1.38fr) minmax(260px, .62fr);
+      gap: clamp(40px, 7vw, 96px);
+      align-items: end;
+    }
+    .eyebrow {
+      margin: 0 0 20px;
+      color: var(--terracotta);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+    }
+    h1, h2, h3, p { text-wrap: pretty; }
+    h1 {
+      max-width: 840px;
+      margin: 0;
+      font-family: var(--serif);
+      font-size: clamp(42px, 6vw, 76px);
+      font-weight: 600;
+      line-height: 1.16;
+      letter-spacing: -.035em;
+    }
+    h1 .en {
+      display: block;
+      margin-bottom: 6px;
+      color: var(--sage-dark);
+      font-family: var(--sans);
+      font-size: .25em;
+      font-weight: 700;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+    }
+    .lede {
+      max-width: 720px;
+      margin: 28px 0 0;
+      color: var(--muted);
+      font-family: var(--serif);
+      font-size: clamp(18px, 2vw, 22px);
+      line-height: 1.9;
+    }
+    .rhythm-score {
+      min-height: 250px;
+      padding: 26px 24px;
+      border-top: 2px solid var(--ink);
+      border-bottom: 1px solid var(--line-strong);
+      display: grid;
+      align-content: center;
+      gap: 18px;
+    }
+    .score-row { display: grid; grid-template-columns: 62px 1fr; gap: 16px; align-items: center; }
+    .score-row span { color: var(--quiet); font-size: 11px; font-weight: 700; letter-spacing: .12em; }
+    .beat-line { height: 30px; display: flex; align-items: center; gap: 11px; }
+    .beat-line i { display: block; width: 8px; border-radius: 99px; background: var(--terracotta); }
+    .beat-line i:nth-child(1) { height: 30px; }
+    .beat-line i:nth-child(2) { height: 12px; background: var(--sage); }
+    .beat-line i:nth-child(3) { height: 20px; }
+    .beat-line i:nth-child(4) { height: 8px; background: var(--sage); }
+    .beat-line i:nth-child(5) { height: 25px; }
+    .beat-line i:nth-child(6) { height: 14px; background: var(--sage); }
+    .score-note { margin: 4px 0 0; color: var(--muted); font-size: 13px; }
+
+    .event-facts {
+      margin: 54px 0 0;
+      padding: 24px 0;
+      border-top: 1px solid var(--line-strong);
+      border-bottom: 1px solid var(--line-strong);
+      display: grid;
+      grid-template-columns: 1.1fr .9fr 1.35fr .65fr;
+      gap: 0;
+    }
+    .event-facts > div { min-width: 0; padding: 0 24px; border-right: 1px solid var(--line); }
+    .event-facts > div:first-child { padding-left: 0; }
+    .event-facts > div:last-child { padding-right: 0; border-right: 0; }
+    .event-facts dt { margin-bottom: 5px; color: var(--quiet); font-size: 12px; font-weight: 700; letter-spacing: .08em; }
+    .event-facts dd { margin: 0; font-weight: 600; line-height: 1.55; }
+    .fact-sub { display: block; margin-top: 4px; color: var(--muted); font-size: 13px; font-weight: 400; }
+
+    .principles {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 28px 68px;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      border-bottom: 1px solid var(--line);
+    }
+    .principle { padding: 0 28px; border-right: 1px solid var(--line); }
+    .principle:first-child { padding-left: 0; }
+    .principle:last-child { padding-right: 0; border-right: 0; }
+    .principle strong { display: block; margin-bottom: 5px; font-family: var(--serif); font-size: 18px; }
+    .principle span { color: var(--muted); font-size: 14px; }
+
+    .registration-section {
+      background: var(--surface-soft);
+      border-bottom: 1px solid var(--line);
+    }
+    .registration-layout {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 76px 28px 88px;
+      display: grid;
+      grid-template-columns: minmax(0, 760px) minmax(240px, 1fr);
+      gap: clamp(42px, 7vw, 86px);
+      align-items: start;
+    }
+    .section-kicker { margin: 0 0 8px; color: var(--terracotta); font-size: 13px; font-weight: 700; letter-spacing: .14em; }
+    h2 {
+      margin: 0;
+      font-family: var(--serif);
+      font-size: clamp(34px, 4.2vw, 52px);
+      font-weight: 600;
+      line-height: 1.25;
+      letter-spacing: -.025em;
+    }
+    .section-intro { max-width: 640px; margin: 18px 0 34px; color: var(--muted); font-size: 16px; }
+
+    .mode-notice {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      margin: 0 0 28px;
+      padding: 14px 16px;
+      border: 1px solid #d3b97c;
+      background: var(--warning-soft);
+      color: #614416;
+      border-radius: 10px;
+      font-size: 14px;
+    }
+    .mode-notice strong { display: block; margin-bottom: 2px; }
+    .mode-notice-mark { flex: 0 0 auto; width: 10px; height: 10px; margin-top: 7px; border-radius: 50%; background: #ad762a; }
+
+    .progress-wrap { margin: 0 0 30px; }
+    .progress-head { display: flex; justify-content: space-between; gap: 16px; margin-bottom: 9px; color: var(--muted); font-size: 13px; }
+    .progress-track { height: 5px; overflow: hidden; border-radius: 99px; background: var(--paper-deep); }
+    .progress-bar { width: 0; height: 100%; background: var(--terracotta); transition: width .25s ease; }
+
+    form { margin: 0; }
+    fieldset {
+      min-width: 0;
+      margin: 0;
+      padding: 34px 0 38px;
+      border: 0;
+      border-top: 1px solid var(--line-strong);
+    }
+    legend {
+      width: 100%;
+      padding: 0 0 4px;
+      font-family: var(--serif);
+      font-size: 24px;
+      font-weight: 600;
+    }
+    .legend-note { display: block; margin: 3px 0 24px; color: var(--muted); font-family: var(--sans); font-size: 14px; font-weight: 400; }
+    .fields { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px 18px; }
+    .field { min-width: 0; }
+    .field.full { grid-column: 1 / -1; }
+    label, .field-label { display: inline-block; margin-bottom: 8px; font-size: 14px; font-weight: 700; }
+    .required { color: var(--terracotta); }
+    .optional { color: var(--quiet); font-size: 12px; font-weight: 500; }
+    input[type="text"], input[type="email"], input[type="tel"], textarea {
+      width: 100%;
+      min-height: 50px;
+      padding: 12px 14px;
+      border: 1px solid var(--line-strong);
+      border-radius: 9px;
+      outline: 0;
+      background: var(--surface);
+      color: var(--ink);
+      transition: border-color .15s ease, box-shadow .15s ease, background .15s ease;
+    }
+    textarea { min-height: 124px; resize: vertical; }
+    input:hover, textarea:hover { border-color: #8e8376; }
+    input:focus-visible, textarea:focus-visible, button:focus-visible, summary:focus-visible, a:focus-visible {
+      outline: 3px solid color-mix(in srgb, var(--focus) 35%, transparent);
+      outline-offset: 2px;
+    }
+    input:focus, textarea:focus { border-color: var(--focus); box-shadow: 0 0 0 3px rgba(23, 105, 170, .12); }
+    input[aria-invalid="true"], textarea[aria-invalid="true"] { border-color: var(--danger); background: #fffafa; }
+    .hint, .counter { margin: 6px 0 0; color: var(--quiet); font-size: 12px; line-height: 1.55; }
+    .counter { text-align: right; }
+    .error-text { margin: 6px 0 0; color: var(--danger); font-size: 13px; font-weight: 600; }
+
+    .segments { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+    .segment { position: relative; }
+    .segment input { position: absolute; opacity: 0; pointer-events: none; }
+    .segment label {
+      min-height: 52px;
+      margin: 0;
+      padding: 12px 14px;
+      border: 1px solid var(--line-strong);
+      border-radius: 9px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background: var(--surface);
+      cursor: pointer;
+    }
+    .segment input:checked + label { border-color: var(--terracotta); background: var(--terracotta-soft); color: var(--terracotta-dark); box-shadow: inset 0 0 0 1px var(--terracotta); }
+    .segment input:focus-visible + label { outline: 3px solid rgba(23, 105, 170, .28); outline-offset: 2px; }
+
+    .checkbox-row {
+      position: relative;
+      display: grid;
+      grid-template-columns: 24px 1fr;
+      gap: 12px;
+      align-items: start;
+      margin: 0 0 14px;
+      padding: 15px 16px;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      background: var(--surface);
+    }
+    .checkbox-row input { width: 19px; height: 19px; margin: 3px 0 0; accent-color: var(--terracotta); }
+    .checkbox-row label { margin: 0; font-weight: 500; cursor: pointer; }
+    .checkbox-row small { display: block; margin-top: 3px; color: var(--muted); font-weight: 400; line-height: 1.6; }
+
+    .error-summary {
+      margin: 0 0 24px;
+      padding: 16px 18px;
+      border: 1px solid #d4938d;
+      border-radius: 10px;
+      background: var(--danger-soft);
+      color: #702821;
+    }
+    .error-summary strong { display: block; margin-bottom: 4px; }
+    .error-summary ul { margin: 0; padding-left: 1.2em; }
+
+    .submit-area { padding-top: 26px; border-top: 1px solid var(--line-strong); }
+    .submit-button {
+      width: 100%;
+      min-height: 58px;
+      padding: 14px 22px;
+      border: 1px solid var(--terracotta-dark);
+      border-radius: 10px;
+      background: var(--terracotta);
+      color: white;
+      font-weight: 700;
+      letter-spacing: .04em;
+      cursor: pointer;
+      box-shadow: 0 1px 0 rgba(255,255,255,.25) inset, 0 8px 18px rgba(120, 55, 31, .13);
+      transition: transform .15s ease, background .15s ease;
+    }
+    .submit-button:hover:not(:disabled) { background: var(--terracotta-dark); transform: translateY(-1px); }
+    .submit-button:active:not(:disabled) { transform: translateY(0); }
+    .submit-button:disabled { cursor: not-allowed; opacity: .55; box-shadow: none; }
+    .submit-note { margin: 11px 0 0; color: var(--muted); font-size: 12px; text-align: center; }
+    .button-loading { display: inline-flex; align-items: center; gap: 9px; }
+    .spinner { width: 15px; height: 15px; border: 2px solid rgba(255,255,255,.45); border-top-color: white; border-radius: 50%; animation: spin .75s linear infinite; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    .registration-aside {
+      position: sticky;
+      top: 102px;
+      padding-top: 22px;
+      border-top: 2px solid var(--ink);
+    }
+    .aside-title { margin: 0 0 18px; font-family: var(--serif); font-size: 22px; }
+    .aside-list { margin: 0; }
+    .aside-list > div { padding: 14px 0; border-top: 1px solid var(--line); }
+    .aside-list dt { color: var(--quiet); font-size: 12px; font-weight: 700; letter-spacing: .06em; }
+    .aside-list dd { margin: 3px 0 0; font-size: 14px; font-weight: 600; }
+    .aside-rule { margin: 24px 0 0; padding: 18px 0 0; border-top: 1px solid var(--line-strong); }
+    .aside-rule p { margin: 0 0 10px; color: var(--muted); font-size: 13px; }
+    .aside-rule strong { color: var(--ink); }
+    .map-link { display: inline-flex; min-height: 44px; align-items: center; color: var(--terracotta-dark); font-size: 13px; font-weight: 700; }
+
+    .privacy-section {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 62px 28px 78px;
+      display: grid;
+      grid-template-columns: .8fr 1.2fr;
+      gap: clamp(40px, 8vw, 100px);
+    }
+    .privacy-section h2 { font-size: clamp(30px, 3.5vw, 42px); }
+    .privacy-copy { margin: 14px 0 0; color: var(--muted); }
+    details { border-top: 1px solid var(--line-strong); }
+    details:last-child { border-bottom: 1px solid var(--line-strong); }
+    summary { min-height: 58px; padding: 16px 4px; cursor: pointer; font-weight: 700; }
+    details p, details ul { margin: 0 0 18px; color: var(--muted); font-size: 14px; }
+    details ul { padding-left: 1.25em; }
+
+    footer { border-top: 1px solid var(--line-strong); }
+    .footer-inner {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 28px;
+      display: flex;
+      justify-content: space-between;
+      gap: 24px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    dialog {
+      width: min(92vw, 560px);
+      padding: 0;
+      border: 1px solid var(--line-strong);
+      border-radius: 16px;
+      background: var(--surface);
+      color: var(--ink);
+      box-shadow: var(--shadow);
+    }
+    dialog::backdrop { background: rgba(41, 40, 36, .52); backdrop-filter: blur(3px); }
+    .dialog-inner { padding: 32px; }
+    .dialog-beats { margin: 0 0 20px; color: var(--terracotta); letter-spacing: .35em; }
+    .dialog-inner h2 { font-size: 32px; }
+    .dialog-inner p { color: var(--muted); }
+    .confirmation-code { padding: 12px 14px; border-radius: 8px; background: var(--paper); font-weight: 700; word-break: break-all; }
+    .dialog-close { min-height: 46px; padding: 10px 18px; border: 1px solid var(--ink); border-radius: 8px; background: var(--ink); color: white; cursor: pointer; }
+
+    .visually-hidden {
+      position: absolute !important;
+      width: 1px !important;
+      height: 1px !important;
+      padding: 0 !important;
+      margin: -1px !important;
+      overflow: hidden !important;
+      clip: rect(0, 0, 0, 0) !important;
+      white-space: nowrap !important;
+      border: 0 !important;
+    }
+    .honeypot { position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden; }
+
+    @media (max-width: 860px) {
+      .event-intro { grid-template-columns: 1fr; }
+      .rhythm-score { min-height: 0; }
+      .event-facts { grid-template-columns: 1fr 1fr; row-gap: 22px; }
+      .event-facts > div, .event-facts > div:first-child, .event-facts > div:last-child { padding: 0 18px; border-right: 1px solid var(--line); }
+      .event-facts > div:nth-child(odd) { padding-left: 0; }
+      .event-facts > div:nth-child(even) { padding-right: 0; border-right: 0; }
+      .principles { grid-template-columns: 1fr; }
+      .principle, .principle:first-child, .principle:last-child { padding: 18px 0; border-right: 0; border-top: 1px solid var(--line); }
+      .registration-layout { grid-template-columns: 1fr; }
+      .registration-aside { position: static; order: -1; }
+      .aside-list { display: grid; grid-template-columns: 1fr 1fr; gap: 0 22px; }
+      .privacy-section { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 580px) {
+      .topbar-inner { min-height: 60px; padding: 0 18px; }
+      .wordmark-text { display: none; }
+      .status-pill { font-size: 12px; }
+      .intro-wrap { padding: 48px 18px 36px; }
+      h1 { font-size: clamp(38px, 13vw, 54px); }
+      .lede { margin-top: 22px; }
+      .event-facts { margin-top: 38px; grid-template-columns: 1fr; }
+      .event-facts > div, .event-facts > div:first-child, .event-facts > div:last-child, .event-facts > div:nth-child(odd), .event-facts > div:nth-child(even) { padding: 13px 0; border-right: 0; border-top: 1px solid var(--line); }
+      .event-facts > div:first-child { border-top: 0; }
+      .principles { padding: 0 18px 48px; }
+      .registration-layout { padding: 54px 18px 64px; }
+      .fields { grid-template-columns: 1fr; }
+      .field.full { grid-column: auto; }
+      fieldset { padding: 30px 0 34px; }
+      .aside-list { grid-template-columns: 1fr; }
+      .privacy-section { padding: 50px 18px 62px; }
+      .footer-inner { padding: 22px 18px; flex-direction: column; gap: 5px; }
+      .dialog-inner { padding: 26px 22px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+    }
+
+    @media print {
+      .topbar, .submit-area, dialog, iframe { display: none !important; }
+      body { background: white; }
+      .intro-wrap, .registration-layout, .privacy-section { max-width: none; padding: 24px; }
+      .registration-layout { grid-template-columns: 1fr; }
+      input, textarea { border: 1px solid #777; background: white; }
+    }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Event",
+    "name": "Rhythm in Motion｜把節奏裝進身體",
+    "description": "爵士鼓律動與肢體表達經驗分享會，以身體打擊、聽覺微動態與群體共創感受 Groove。",
+    "startDate": "2026-11-28T14:00:00+08:00",
+    "endDate": "2026-11-28T15:00:00+08:00",
+    "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+    "eventStatus": "https://schema.org/EventScheduled",
+    "isAccessibleForFree": true,
+    "location": {
+      "@type": "Place",
+      "name": "臺灣當代文化實驗場（C-LAB）多功能廳",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "建國南路一段177號",
+        "addressLocality": "臺北市大安區",
+        "addressCountry": "TW"
+      }
+    },
+    "organizer": { "@type": "Person", "name": "王苡丞" }
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#registration">跳到報名表</a>
+
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="wordmark" href="#top" aria-label="回到頁首">
+        <span class="wordmark-beats" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+        <span class="wordmark-text">RHYTHM IN MOTION</span>
+      </a>
+      <span class="status-pill" id="statusPill" data-state="preview">系統預覽</span>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="intro-wrap" aria-labelledby="event-title">
+      <div class="event-intro">
+        <div>
+          <p class="eyebrow">跨界音樂與肢體藝術分享會</p>
+          <h1 id="event-title"><span class="en">Rhythm in Motion</span>把節奏裝進身體</h1>
+          <p class="lede">不靠樂譜，先讓身體聽見節奏。用身體打擊、聽覺對話與 50 人集體共創，在 60 分鐘裡感受 Groove 的重量、呼吸與回彈。</p>
+        </div>
+        <div class="rhythm-score" aria-label="節奏視覺：低頻、中頻與高頻交錯排列">
+          <div class="score-row"><span>BODY</span><div class="beat-line" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
+          <div class="score-row"><span>POCKET</span><div class="beat-line" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
+          <div class="score-row"><span>GROOVE</span><div class="beat-line" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
+          <p class="score-note">踏步／拍腿 · 拍掌 · 沙蛋<br>每一個身體，都能成為第一件樂器。</p>
+        </div>
+      </div>
+
+      <dl class="event-facts">
+        <div>
+          <dt>日期</dt>
+          <dd><time datetime="2026-11-28">2026.11.28（六）</time><span class="fact-sub">13:30 開放報到</span></dd>
+        </div>
+        <div>
+          <dt>時間</dt>
+          <dd><time datetime="14:00">14:00</time>–<time datetime="15:00">15:00</time><span class="fact-sub">共 60 分鐘</span></dd>
+        </div>
+        <div>
+          <dt>地點</dt>
+          <dd>C-LAB 多功能廳<span class="fact-sub">臺北市大安區建國南路一段 177 號</span></dd>
+        </div>
+        <div>
+          <dt>名額</dt>
+          <dd>50 人<span class="fact-sub">免費參加</span></dd>
+        </div>
+      </dl>
+    </section>
+
+    <section class="principles" aria-label="活動參與原則">
+      <div class="principle"><strong>零基礎也能參與</strong><span>不需打擊樂經驗，不比較技巧。</span></div>
+      <div class="principle"><strong>動作可以替換</strong><span>站姿、坐姿、拍腿、拍掌或純聆聽皆可。</span></div>
+      <div class="principle"><strong>不攝錄、不直播</strong><span>讓注意力留在當下，也保護每位參與者。</span></div>
+    </section>
+
+    <section class="registration-section" id="registration" aria-labelledby="registration-title">
+      <div class="registration-layout">
+        <div>
+          <p class="section-kicker">ONLINE REGISTRATION</p>
+          <h2 id="registration-title">線上報名</h2>
+          <p class="section-intro">每筆可登記 1–2 人。報名結果以系統確認信為準；正取者請於活動當日 13:50 前完成簽到，逾時席位將依序釋出予現場候補。</p>
+
+          <div class="mode-notice" id="modeNotice" role="status">
+            <span class="mode-notice-mark" aria-hidden="true"></span>
+            <div><strong>目前為預覽模式</strong><span>你可以完整試填與檢查流程，但資料不會傳送或儲存。</span></div>
+          </div>
+
+          <div class="progress-wrap" aria-label="表單完成進度">
+            <div class="progress-head"><span>必填欄位完成度</span><strong id="progressText">0%</strong></div>
+            <div class="progress-track" role="progressbar" aria-label="必填欄位完成度" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="progressTrack"><div class="progress-bar" id="progressBar"></div></div>
+          </div>
+
+          <div class="error-summary" id="errorSummary" role="alert" tabindex="-1" hidden>
+            <strong>請先修正以下欄位：</strong>
+            <ul id="errorList"></ul>
+          </div>
+
+          <form id="registrationForm" method="post" target="submissionTarget" novalidate>
+            <input type="hidden" name="requestId" id="requestId">
+            <input type="hidden" name="eventId" id="eventId" value="rim-2026-11-28">
+            <input type="hidden" name="submittedAt" id="submittedAt">
+            <input type="hidden" name="startedAt" id="startedAt">
+            <input type="hidden" name="source" value="github-pages">
+            <div class="honeypot" aria-hidden="true">
+              <label for="website">請勿填寫此欄</label>
+              <input type="text" name="website" id="website" tabindex="-1" autocomplete="off">
+            </div>
+
+            <fieldset>
+              <legend>01｜基本聯絡資料<span class="legend-note">用於實名報到、結果通知與必要異動聯繫。</span></legend>
+              <div class="fields">
+                <div class="field">
+                  <label for="fullName">姓名 <span class="required" aria-hidden="true">＊</span><span class="visually-hidden">必填</span></label>
+                  <input id="fullName" name="fullName" type="text" maxlength="50" autocomplete="name" required aria-describedby="fullNameHint fullNameError">
+                  <p class="hint" id="fullNameHint">請填寫與現場報到相同的姓名。</p>
+                  <p class="error-text" id="fullNameError" hidden></p>
+                </div>
+                <div class="field">
+                  <label for="phone">聯絡電話 <span class="required" aria-hidden="true">＊</span><span class="visually-hidden">必填</span></label>
+                  <input id="phone" name="phone" type="tel" maxlength="30" inputmode="tel" autocomplete="tel" placeholder="例如 0912 345 678" required aria-describedby="phoneHint phoneError">
+                  <p class="hint" id="phoneHint">僅於活動異動或當日必要聯繫使用。</p>
+                  <p class="error-text" id="phoneError" hidden></p>
+                </div>
+                <div class="field full">
+                  <label for="email">電子郵件 Email <span class="required" aria-hidden="true">＊</span><span class="visually-hidden">必填</span></label>
+                  <input id="email" name="email" type="email" maxlength="160" autocomplete="email" required aria-describedby="emailHint emailError">
+                  <p class="hint" id="emailHint">正取／候補結果及活動提醒將寄至此信箱。</p>
+                  <p class="error-text" id="emailError" hidden></p>
+                </div>
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <legend>02｜參與安排<span class="legend-note">每筆報名最多 2 人；2 人同行不拆分正取。</span></legend>
+              <div class="fields">
+                <div class="field full">
+                  <span class="field-label" id="seatsLabel">參與人數 <span class="required" aria-hidden="true">＊</span><span class="visually-hidden">必填</span></span>
+                  <div class="segments" role="radiogroup" aria-labelledby="seatsLabel">
+                    <div class="segment"><input type="radio" id="seats1" name="seats" value="1" checked><label for="seats1">1 人</label></div>
+                    <div class="segment"><input type="radio" id="seats2" name="seats" value="2"><label for="seats2">2 人同行</label></div>
+                  </div>
+                </div>
+                <div class="field full" id="companionField" hidden>
+                  <label for="companionName">同行者姓名 <span class="required" aria-hidden="true">＊</span><span class="visually-hidden">選擇 2 人時必填</span></label>
+                  <input id="companionName" name="companionName" type="text" maxlength="50" autocomplete="off" aria-describedby="companionHint companionNameError">
+                  <p class="hint" id="companionHint">兩位皆須於 13:50 前完成報到。</p>
+                  <p class="error-text" id="companionNameError" hidden></p>
+                </div>
+                <div class="field full">
+                  <label for="accessibilityNeeds">無障礙或參與協助需求 <span class="optional">選填</span></label>
+                  <textarea id="accessibilityNeeds" name="accessibilityNeeds" maxlength="300" placeholder="例如：需坐姿參與、輪椅動線或希望安排靠近出口的位置。" aria-describedby="accessibilityHint accessibilityCount"></textarea>
+                  <p class="hint" id="accessibilityHint">僅供現場安排使用；若無需求可留白。</p>
+                  <p class="counter" id="accessibilityCount">0 / 300</p>
+                </div>
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <legend>03｜與節奏相遇<span class="legend-note">分享你的提問，也讓現場對話更貼近真實經驗。</span></legend>
+              <div class="fields">
+                <div class="field full">
+                  <label for="question">公開議題徵集 <span class="optional">選填</span></label>
+                  <textarea id="question" name="question" maxlength="500" placeholder="你在練習打擊樂或感受節奏時，最常遇到的肢體或聽覺瓶頸是什麼？" aria-describedby="questionHint questionCount"></textarea>
+                  <p class="hint" id="questionHint">分享人將於現場挑選 1 題匿名回應，請勿填入他人個資。</p>
+                  <p class="counter" id="questionCount">0 / 500</p>
+                </div>
+                <div class="field full">
+                  <label for="referral">從哪裡得知本活動？ <span class="optional">選填</span></label>
+                  <input id="referral" name="referral" type="text" maxlength="100" placeholder="例如：C-LAB 園區、朋友分享、社群貼文" aria-describedby="referralHint">
+                  <p class="hint" id="referralHint">僅用於去識別化的宣傳成效統計。</p>
+                </div>
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <legend>04｜確認與同意<span class="legend-note">請閱讀後勾選；兩項皆為報名必要條件。</span></legend>
+              <div class="checkbox-row">
+                <input id="ageConfirm" name="ageConfirm" type="checkbox" value="yes" required>
+                <label for="ageConfirm">我已年滿 12 歲；或未滿 12 歲並由成年家長全程陪同。<small>活動包含輕度踏步、拍腿與拍掌；所有動作均可降低、替換或退出。</small></label>
+              </div>
+              <div class="checkbox-row">
+                <input id="privacyConsent" name="privacyConsent" type="checkbox" value="yes" required>
+                <label for="privacyConsent">我已閱讀並同意入場規範與個人資料告知。<small>資料僅用於本活動報名、通知、報到與必要安全聯繫；活動後 30 日內刪除可識別資料。正式流程不攝錄影或直播。</small></label>
+              </div>
+            </fieldset>
+
+            <div class="submit-area">
+              <button class="submit-button" id="submitButton" type="submit"><span id="submitLabel">預覽送出流程</span></button>
+              <p class="submit-note" id="submitNote">預覽模式不會傳送或保存任何填寫資料。</p>
+            </div>
+          </form>
+          <iframe class="visually-hidden" id="submissionTarget" name="submissionTarget" title="報名送出結果"></iframe>
+        </div>
+
+        <aside class="registration-aside" aria-labelledby="aside-title">
+          <h3 class="aside-title" id="aside-title">報名前請確認</h3>
+          <dl class="aside-list">
+            <div><dt>預約報到</dt><dd>13:30–13:50</dd></div>
+            <div><dt>候補釋出</dt><dd>13:50 起依空位叫號</dd></div>
+            <div><dt>停止入場</dt><dd>14:15 起</dd></div>
+            <div><dt>服裝建議</dt><dd>平底鞋、方便活動的服裝</dd></div>
+            <div><dt>活動費用</dt><dd>免費</dd></div>
+            <div><dt>攝錄規範</dt><dd>正式流程不攝錄、不直播</dd></div>
+          </dl>
+          <div class="aside-rule">
+            <p><strong>場地提醒</strong><br>廳內禁止飲食、吸菸、攜帶危險物品或大型行李；合格導盲犬／輔助犬除外。</p>
+            <p id="organizerContact">主辦聯絡方式將於正式開放前公告。</p>
+            <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=%E8%87%BA%E5%8C%97%E5%B8%82%E5%A4%A7%E5%AE%89%E5%8D%80%E5%BB%BA%E5%9C%8B%E5%8D%97%E8%B7%AF%E4%B8%80%E6%AE%B5177%E8%99%9F" target="_blank" rel="noopener noreferrer">在地圖中查看地址 ↗</a>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="privacy-section" aria-labelledby="privacy-title">
+      <div>
+        <p class="section-kicker">BEFORE YOU JOIN</p>
+        <h2 id="privacy-title">參與與隱私說明</h2>
+        <p class="privacy-copy">這不只是報名條款，也是活動如何照顧身體界線、公共空間與個人資料的承諾。</p>
+      </div>
+      <div>
+        <details>
+          <summary>我一定要完成所有肢體動作嗎？</summary>
+          <p>不用。每一段都可改為坐姿、拍腿、拍掌、縮小動作或純聆聽。胸前輕拍只是示範選項，不是參與條件；感到不適可隨時停止並告知工作人員。</p>
+        </details>
+        <details>
+          <summary>報名資料會如何使用？</summary>
+          <ul>
+            <li>姓名、同行者姓名：實名報到與席次管理。</li>
+            <li>電話、Email：結果通知、活動提醒與必要異動聯繫。</li>
+            <li>協助需求：安排合適位置或替代參與方式。</li>
+            <li>活動後 30 日內刪除可識別資料，只保留去識別統計。</li>
+          </ul>
+        </details>
+        <details>
+          <summary>如果額滿或當日遲到怎麼辦？</summary>
+          <p>額滿後的新報名會列為候補。正取者若未於 13:50 前完成簽到，席位將依現場候補順序釋出；14:15 起停止開放入場，以維護沉浸式體驗。</p>
+        </details>
+        <details>
+          <summary>現場會拍照或錄影嗎？</summary>
+          <p>不會。正式活動流程不攝影、錄影或直播，也不安排閉幕合照。事後僅發布不含個資與可識別影像的文字／觀念摘要。</p>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <span>主辦／分享人：王苡丞</span>
+      <span>Rhythm in Motion · 2026</span>
+    </div>
+  </footer>
+
+  <dialog id="resultDialog" aria-labelledby="dialogTitle">
+    <div class="dialog-inner">
+      <p class="dialog-beats" aria-hidden="true">● ○ ● ● ○</p>
+      <h2 id="dialogTitle">流程完成</h2>
+      <p id="dialogMessage"></p>
+      <p class="confirmation-code" id="confirmationCode" hidden></p>
+      <button class="dialog-close" id="dialogClose" type="button">關閉</button>
+    </div>
+  </dialog>
+
+  <noscript>
+    <div style="padding:16px;background:#f7e1de;color:#702821;text-align:center">此報名表需要 JavaScript 才能進行欄位驗證與送出，請啟用 JavaScript 後重試。</div>
+  </noscript>
+
+  <script src="config.js"></script>
+  <script>
+    (() => {
+      "use strict";
+
+      const config = window.RIM_CONFIG || { status: "preview", endpoint: "", capacity: 50, eventId: "rim-2026-11-28", organizerEmail: "" };
+      const form = document.getElementById("registrationForm");
+      const submitButton = document.getElementById("submitButton");
+      const submitLabel = document.getElementById("submitLabel");
+      const submitNote = document.getElementById("submitNote");
+      const statusPill = document.getElementById("statusPill");
+      const modeNotice = document.getElementById("modeNotice");
+      const progressBar = document.getElementById("progressBar");
+      const progressText = document.getElementById("progressText");
+      const progressTrack = document.getElementById("progressTrack");
+      const errorSummary = document.getElementById("errorSummary");
+      const errorList = document.getElementById("errorList");
+      const companionField = document.getElementById("companionField");
+      const companionName = document.getElementById("companionName");
+      const phone = document.getElementById("phone");
+      const iframe = document.getElementById("submissionTarget");
+      const dialog = document.getElementById("resultDialog");
+      const dialogTitle = document.getElementById("dialogTitle");
+      const dialogMessage = document.getElementById("dialogMessage");
+      const confirmationCode = document.getElementById("confirmationCode");
+      const dialogClose = document.getElementById("dialogClose");
+      let awaitingResponse = false;
+      let fallbackTimer = null;
+
+      const state = ["preview", "open", "closed"].includes(config.status) ? config.status : "preview";
+      document.body.dataset.registrationState = state;
+      document.getElementById("eventId").value = config.eventId || "rim-2026-11-28";
+      document.getElementById("startedAt").value = new Date().toISOString();
+
+      function createRequestId() {
+        if (window.crypto && typeof window.crypto.randomUUID === "function") return window.crypto.randomUUID();
+        return `rim-${Date.now()}-${Math.random().toString(16).slice(2)}`;
+      }
+      document.getElementById("requestId").value = createRequestId();
+
+      function setMode() {
+        const contact = document.getElementById("organizerContact");
+        if (config.organizerEmail) {
+          contact.innerHTML = `聯絡信箱：<a href="mailto:${escapeHtml(config.organizerEmail)}">${escapeHtml(config.organizerEmail)}</a>`;
+        }
+
+        statusPill.dataset.state = state;
+        if (state === "open" && config.endpoint) {
+          statusPill.textContent = "報名開放中";
+          modeNotice.hidden = true;
+          submitLabel.textContent = "送出報名";
+          submitNote.textContent = "送出後請留意 Email 正取／候補確認信。";
+          return;
+        }
+        if (state === "closed") {
+          statusPill.textContent = "報名已停止";
+          modeNotice.hidden = false;
+          modeNotice.innerHTML = '<span class="mode-notice-mark" aria-hidden="true"></span><div><strong>目前停止收件</strong><span>表單可供閱讀，但已無法送出。請留意主辦人後續公告。</span></div>';
+          submitLabel.textContent = "目前停止收件";
+          submitButton.disabled = true;
+          [...form.elements].forEach((control) => { if (control.type !== "hidden") control.disabled = true; });
+          submitNote.textContent = "";
+          return;
+        }
+        if (state === "open" && !config.endpoint) {
+          statusPill.textContent = "系統設定中";
+          statusPill.dataset.state = "closed";
+          modeNotice.hidden = false;
+          modeNotice.innerHTML = '<span class="mode-notice-mark" aria-hidden="true"></span><div><strong>收件端點尚未設定</strong><span>目前無法送出，請聯絡主辦人完成後端設定。</span></div>';
+          submitLabel.textContent = "暫時無法送出";
+          submitButton.disabled = true;
+          submitNote.textContent = "請先在 config.js 設定 Google Apps Script Web App 網址。";
+          return;
+        }
+        statusPill.textContent = "系統預覽";
+        modeNotice.hidden = false;
+        submitLabel.textContent = "預覽送出流程";
+        submitNote.textContent = "預覽模式不會傳送或保存任何填寫資料。";
+      }
+
+      function escapeHtml(value) {
+        return String(value).replace(/[&<>'"]/g, (char) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", "'": "&#39;", '"': "&quot;" }[char]));
+      }
+
+      function selectedSeats() {
+        return Number(form.querySelector('input[name="seats"]:checked')?.value || 1);
+      }
+
+      function toggleCompanion() {
+        const needsCompanion = selectedSeats() === 2;
+        companionField.hidden = !needsCompanion;
+        companionName.required = needsCompanion;
+        if (!needsCompanion) {
+          companionName.value = "";
+          clearFieldError(companionName);
+        }
+        updateProgress();
+      }
+
+      function validatePhone() {
+        const raw = phone.value.trim();
+        const digits = raw.replace(/\D/g, "");
+        if (!raw) phone.setCustomValidity("請填寫聯絡電話。");
+        else if (digits.length < 8 || digits.length > 15 || !/^[+()\-\d\s]+$/.test(raw)) phone.setCustomValidity("請輸入有效的聯絡電話，例如 0912 345 678。");
+        else phone.setCustomValidity("");
+      }
+
+      function fieldLabel(control) {
+        const label = form.querySelector(`label[for="${CSS.escape(control.id)}"]`);
+        return label ? label.textContent.replace(/＊|必填/g, "").trim() : control.name;
+      }
+
+      function messageFor(control) {
+        if (control.validity.valueMissing) return `請填寫或勾選「${fieldLabel(control)}」。`;
+        if (control.validity.typeMismatch) return `「${fieldLabel(control)}」格式不正確。`;
+        return control.validationMessage || `請檢查「${fieldLabel(control)}」。`;
+      }
+
+      function showFieldError(control) {
+        control.setAttribute("aria-invalid", "true");
+        const target = document.getElementById(`${control.id}Error`);
+        if (target) {
+          target.textContent = messageFor(control);
+          target.hidden = false;
+        }
+      }
+
+      function clearFieldError(control) {
+        control.removeAttribute("aria-invalid");
+        const target = document.getElementById(`${control.id}Error`);
+        if (target) {
+          target.textContent = "";
+          target.hidden = true;
+        }
+      }
+
+      function validateForm() {
+        validatePhone();
+        const invalid = [...form.querySelectorAll("input, textarea")].filter((control) => !control.disabled && !control.checkValidity());
+        [...form.querySelectorAll('[aria-invalid="true"]')].forEach(clearFieldError);
+        invalid.forEach(showFieldError);
+        errorList.replaceChildren();
+        if (invalid.length) {
+          invalid.forEach((control) => {
+            const item = document.createElement("li");
+            const link = document.createElement("a");
+            link.href = `#${control.id}`;
+            link.textContent = messageFor(control);
+            link.addEventListener("click", (event) => {
+              event.preventDefault();
+              control.focus();
+            });
+            item.appendChild(link);
+            errorList.appendChild(item);
+          });
+          errorSummary.hidden = false;
+          errorSummary.focus();
+          return false;
+        }
+        errorSummary.hidden = true;
+        return true;
+      }
+
+      function requiredControls() {
+        const controls = [
+          document.getElementById("fullName"),
+          phone,
+          document.getElementById("email"),
+          document.getElementById("ageConfirm"),
+          document.getElementById("privacyConsent")
+        ];
+        if (selectedSeats() === 2) controls.push(companionName);
+        return controls;
+      }
+
+      function updateProgress() {
+        validatePhone();
+        const controls = requiredControls();
+        const completed = controls.filter((control) => {
+          if (control.type === "checkbox") return control.checked;
+          return control.value.trim() !== "" && control.checkValidity();
+        }).length;
+        const value = Math.round((completed / controls.length) * 100);
+        progressBar.style.width = `${value}%`;
+        progressText.textContent = `${value}%`;
+        progressTrack.setAttribute("aria-valuenow", String(value));
+      }
+
+      function setCounter(id, value, max) {
+        document.getElementById(id).textContent = `${value.length} / ${max}`;
+      }
+
+      function setSubmitting(active) {
+        submitButton.disabled = active;
+        if (active) {
+          submitLabel.innerHTML = '<span class="button-loading"><span class="spinner" aria-hidden="true"></span>正在送出…</span>';
+          submitButton.setAttribute("aria-busy", "true");
+        } else {
+          submitLabel.textContent = state === "preview" ? "預覽送出流程" : "送出報名";
+          submitButton.removeAttribute("aria-busy");
+        }
+      }
+
+      function showResult(payload) {
+        const preview = payload.preview === true;
+        dialogTitle.textContent = preview ? "預覽流程完成" : payload.status === "候補" ? "已列入候補" : "報名資料已送出";
+        dialogMessage.textContent = preview
+          ? "欄位驗證、送出狀態與完成畫面皆正常；本次資料未傳送、未儲存。正式開放前請設定收件端點。"
+          : payload.message || "請查收系統寄出的確認信，並保存報名編號。";
+        if (payload.registrationCode) {
+          confirmationCode.hidden = false;
+          confirmationCode.textContent = `報名編號：${payload.registrationCode}`;
+        } else {
+          confirmationCode.hidden = true;
+          confirmationCode.textContent = "";
+        }
+        if (typeof dialog.showModal === "function") dialog.showModal();
+        else dialog.setAttribute("open", "");
+      }
+
+      function showSubmissionError(message) {
+        errorList.replaceChildren();
+        const item = document.createElement("li");
+        item.textContent = message || "系統暫時無法收件，請稍後再試。";
+        errorList.appendChild(item);
+        errorSummary.hidden = false;
+        errorSummary.focus();
+      }
+
+      function trustedAppsScriptOrigin(origin) {
+        try {
+          const host = new URL(origin).hostname;
+          return host === "script.google.com" || host.endsWith(".googleusercontent.com");
+        } catch (_) {
+          return false;
+        }
+      }
+
+      form.addEventListener("submit", (event) => {
+        event.preventDefault();
+        if (!validateForm()) return;
+        document.getElementById("submittedAt").value = new Date().toISOString();
+
+        if (state === "preview") {
+          showResult({ preview: true });
+          return;
+        }
+        if (state !== "open" || !config.endpoint) {
+          showSubmissionError("報名系統目前未開放，請稍後再試。");
+          return;
+        }
+
+        setSubmitting(true);
+        awaitingResponse = true;
+        form.action = config.endpoint;
+        form.target = "submissionTarget";
+        HTMLFormElement.prototype.submit.call(form);
+        fallbackTimer = window.setTimeout(() => {
+          if (!awaitingResponse) return;
+          awaitingResponse = false;
+          setSubmitting(false);
+          showResult({ message: "資料已送往報名系統。若 10 分鐘內未收到確認信，請聯絡主辦人查詢。" });
+        }, 12000);
+      });
+
+      window.addEventListener("message", (event) => {
+        if (!awaitingResponse || !trustedAppsScriptOrigin(event.origin)) return;
+        const payload = event.data;
+        if (!payload || payload.source !== "rim-registration") return;
+        awaitingResponse = false;
+        window.clearTimeout(fallbackTimer);
+        setSubmitting(false);
+        if (payload.ok) {
+          showResult(payload);
+          document.getElementById("requestId").value = createRequestId();
+        } else {
+          showSubmissionError(payload.message);
+        }
+      });
+
+      iframe.addEventListener("load", () => {
+        // Apps Script 會優先用 postMessage 回傳明確結果；此事件僅保留作為網路完成訊號。
+      });
+
+      form.addEventListener("input", (event) => {
+        const target = event.target;
+        if (target.matches("input, textarea")) {
+          if (target === phone) validatePhone();
+          if (target.checkValidity()) clearFieldError(target);
+          updateProgress();
+        }
+      });
+      form.addEventListener("change", (event) => {
+        if (event.target.name === "seats") toggleCompanion();
+        updateProgress();
+      });
+      phone.addEventListener("blur", validatePhone);
+      document.getElementById("question").addEventListener("input", (event) => setCounter("questionCount", event.target.value, 500));
+      document.getElementById("accessibilityNeeds").addEventListener("input", (event) => setCounter("accessibilityCount", event.target.value, 300));
+      dialogClose.addEventListener("click", () => dialog.close ? dialog.close() : dialog.removeAttribute("open"));
+
+      setMode();
+      toggleCompanion();
+      updateProgress();
+
+      window.RIM_TEST_HOOKS = Object.freeze({
+        state,
+        selectedSeats,
+        validateForm,
+        updateProgress
+      });
+    })();
+  </script>
+</body>
+</html>
