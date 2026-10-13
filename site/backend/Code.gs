@@ -60,7 +60,7 @@ function getConfig_() {
     sheetName: properties.getProperty("SHEET_NAME") || "報名資料",
     organizerEmail: properties.getProperty("ORGANIZER_EMAIL"),
     allowedOrigin: properties.getProperty("ALLOWED_ORIGIN").replace(/\/+$/, ""),
-    capacity: Number(properties.getProperty("CAPACITY") || "50"),
+    capacity: Number(properties.getProperty("CAPACITY") || "70"),
     formStatus: (properties.getProperty("FORM_STATUS") || "CLOSED").toUpperCase(),
     eventId: properties.getProperty("EVENT_ID") || "rim-2026-11-28",
     retentionCutoff: properties.getProperty("RETENTION_CUTOFF") || "2026-12-28T23:59:59+08:00",

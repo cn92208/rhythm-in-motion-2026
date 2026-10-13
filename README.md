@@ -13,7 +13,9 @@
 |---|---|
 | `Rhythm_in_Motion_正式計畫書.docx` | 可編輯 Word 正式企畫書 |
 | `Rhythm_in_Motion_正式計畫書.pdf` | 由 Microsoft Word 原生匯出的核對版 |
-| `site/index.html` | GitHub Pages 報名頁（含 CSP、無第三方資源） |
+| `site/index.html` | 活動封面頁（海報風格，「我要參加」導向報名頁） |
+| `site/register.html` | GitHub Pages 報名頁（含 CSP、無第三方資源） |
+| `site/cover.css` | 封面頁樣式 |
 | `site/styles.css`、`site/app.js` | 報名頁樣式與程式（外部檔案，配合 CSP `'self'`） |
 | `site/config.js` | 報名狀態、Apps Script 端點、容量與聯絡信箱設定（無機密） |
 | `docs/安全上線規劃.md` | 安全上線規劃書：風險清單、已實作防護、上線檢核與營運規範 |

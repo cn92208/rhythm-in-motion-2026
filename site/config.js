@@ -7,8 +7,8 @@ window.RIM_CONFIG = Object.freeze({
   // 只存在 Apps Script 的「指令碼屬性」，不會出現在此儲存庫。
   endpoint: "https://script.google.com/macros/s/AKfycbx-R2WKCvgU6pocfrJvj-Ib4Ci4tC2JPK1ByweDl1V66ICeOX3Uw7D1aj71IGca3qsq/exec",
 
-  capacity: 50,
+  capacity: 70,
   eventId: "rim-2026-11-28",
   organizerEmail: "yichengstudio@gmail.com",
-  lastUpdated: "2026-10-07"
+  lastUpdated: "2026-10-13"
 });

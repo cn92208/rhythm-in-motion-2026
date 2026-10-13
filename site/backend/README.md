@@ -1,6 +1,6 @@
 # Rhythm in Motion — Google Apps Script 報名後端
 
-此後端把 GitHub Pages 靜態表單寫入 Google 試算表，自動依 50 席容量判定「正取／候補」，並寄出確認信。前端以隱藏 iframe 送出，因此不需處理 CORS。
+此後端把 GitHub Pages 靜態表單寫入 Google 試算表，自動依 70 席容量判定「正取／候補」，並寄出確認信。前端以隱藏 iframe 送出，因此不需處理 CORS。
 
 **安全版（2026-09-21）重點**：畫面上不再顯示正取／候補或報名編號（只寄到報名者信箱）；系統錯誤不回傳內部訊息；蜜罐＋最短填表時間＋每小時／每日上限＋同 Email 去重；`postMessage` 只送往 `ALLOWED_ORIGIN`；主辦通知信不含個資；寄信配額不足時先記錄再補寄。
 
@@ -17,7 +17,7 @@
 | `ORGANIZER_EMAIL` | 主辦收件信箱 | ✅ |
 | `ALLOWED_ORIGIN` | `https://cn92208.github.io`（GitHub Pages 網域，不含路徑與結尾斜線） | ✅ |
 | `SHEET_NAME` | `報名資料` | 預設 `報名資料` |
-| `CAPACITY` | `50` | 預設 50 |
+| `CAPACITY` | `70` | 預設 70 |
 | `FORM_STATUS` | 收件用 `OPEN`；停止收件用 `CLOSED` | 預設 `CLOSED` |
 | `EVENT_ID` | `rim-2026-11-28` | 預設同左 |
 | `RETENTION_CUTOFF` | `2026-12-28T23:59:59+08:00` | 預設同左 |
@@ -53,7 +53,7 @@
 ## 4. 寄信配額（重要）
 
 - 一般 Gmail 帳號 Apps Script 每日約可寄 **100 封**，Google Workspace 約 1,500 封（以 Google 官方當時公告為準）。
-- 每筆報名會寄 1 封確認信（＋1 封主辦通知，若 `ORGANIZER_NOTICE=ON`）。50 席活動若一天湧入大量報名，一般 Gmail 可能用完配額。
+- 每筆報名會寄 1 封確認信（＋1 封主辦通知，若 `ORGANIZER_NOTICE=ON`）。70 席活動若一天湧入大量報名，一般 Gmail 可能用完配額。
 - 配額用完時，報名仍會寫入試算表，備註欄標示「確認信待補寄」；隔日由主辦人在編輯器執行 `resendPendingConfirmations()` 補寄。
 - 若預期短時間內大量報名，建議把 `ORGANIZER_NOTICE` 設為 `OFF`。
 
