@@ -250,6 +250,34 @@ a:focus-visible, .button:focus-visible { outline: 3px solid var(--focus); outlin
 .studio-gallery img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .studio-gallery li:nth-child(4) img { object-position: center 70%; }
 
+/* ---------- Studio page chrome ---------- */
+.page-top {
+  width: min(100%, 1120px);
+  margin: 0 auto;
+  padding: 18px clamp(20px, 5vw, 72px) 0;
+  display: flex; justify-content: space-between; align-items: center; gap: 16px;
+  font-size: 14px; font-weight: 600;
+}
+.page-back { color: var(--ink); text-decoration: none; }
+.page-back:hover { color: var(--orange); }
+.page-cta {
+  padding: 9px 18px; border-radius: 999px;
+  background: var(--orange); color: #fff; text-decoration: none; letter-spacing: .06em;
+}
+.page-cta:hover { background: #d8602a; }
+.studio-page { border-top: 0; flex: 1; background: transparent; }
+.studio-page .studio-gallery li { background: #fffdf8; }
+.studio-page .studio-inner { padding-top: clamp(28px, 4vw, 48px); }
+.studio-page .studio-gallery { grid-auto-rows: clamp(130px, 16vw, 210px); }
+.studio-cta {
+  width: min(100%, 1120px); margin: 0 auto;
+  padding: 0 clamp(20px, 5vw, 72px) clamp(44px, 6vw, 72px);
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px 24px;
+}
+.studio-cta p { margin: 0; font-size: clamp(17px, 2.2vw, 22px); font-weight: 700; color: var(--ink); }
+.foot-link { color: var(--ink); text-decoration: none; font-weight: 600; }
+.foot-link:hover { color: var(--orange); }
+
 .foot {
   display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 24px;
   width: min(100%, 1120px); margin: 0 auto;
@@ -261,7 +289,7 @@ a:focus-visible, .button:focus-visible { outline: 3px solid var(--focus); outlin
 /* ---------- Responsive ---------- */
 @media (max-width: 860px) {
   .studio-inner { grid-template-columns: 1fr; }
-  .studio-gallery { grid-template-columns: repeat(2, 1fr); grid-auto-rows: clamp(110px, 30vw, 200px); }
+  .studio-gallery, .studio-page .studio-gallery { grid-template-columns: repeat(2, 1fr); grid-auto-rows: clamp(110px, 30vw, 200px); }
   .studio-gallery li.wide { grid-column: span 1; }
   .content { max-width: 100%; }
   .side-words { position: static; display: flex; gap: 22px; margin-top: 34px; }
@@ -275,6 +303,8 @@ a:focus-visible, .button:focus-visible { outline: 3px solid var(--focus); outlin
   .poster { padding-top: 24px; }
   .deco .shape, .deco .bar { opacity: .35; }
   .cta { flex-direction: column; align-items: stretch; }
+  .studio-cta { flex-direction: column; align-items: stretch; text-align: center; }
+  .studio-cta .button { width: 100%; }
   .button { width: 100%; }
   .secondary { text-align: center; }
 }
