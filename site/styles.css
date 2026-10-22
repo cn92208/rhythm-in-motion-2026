@@ -339,7 +339,8 @@ input[aria-invalid="true"], textarea[aria-invalid="true"] { border-color: var(--
 .counter { text-align: right; }
 .error-text { margin: 6px 0 0; color: var(--danger); font-size: 13px; font-weight: 600; }
 
-.segments { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+.segments { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; }
+.companions { margin-top: 10px; }
 .segment { position: relative; }
 .segment input { position: absolute; opacity: 0; pointer-events: none; }
 .segment label {

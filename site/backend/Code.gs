@@ -7,6 +7,7 @@
  *   結果只寄到報名者自己的信箱，避免用表單探測某個 Email 是否已報名。
  * - 系統錯誤不把內部錯誤文字回傳給瀏覽器（只有欄位驗證錯誤會回傳）。
  * - 蜜罐欄位、最短填表時間、每小時／每日收件上限、同 Email 去重，降低垃圾報名與寄信轟炸。
+ * - 每筆 1–4 人：同行者姓名以「、」合併存入「同行者姓名」欄。
  * - postMessage 只送往 ALLOWED_ORIGIN（GitHub Pages 網域），不再使用 "*"。
  * - 主辦通知信不含電話與 Email（資料最小化），完整資料只在試算表。
  * - 活動後由排程去識別化；寄信配額不足時先記錄再補寄，不會遺失報名。
@@ -219,7 +220,7 @@ function validate_(params, config) {
     requestId: clean(params.requestId, 80),
     eventId: clean(params.eventId, 80),
     fullName: clean(params.fullName, 50),
-    companionName: clean(params.companionName, 50),
+    companionNames: [params.companionName1, params.companionName2, params.companionName3].map((v) => clean(v, 50)),
     phone: clean(params.phone, 30),
     email: clean(params.email, 160).toLowerCase(),
     seats,
@@ -233,14 +234,17 @@ function validate_(params, config) {
     source: clean(params.source, 80) || "github-pages"
   };
 
+  data.companionNames = data.companionNames.slice(0, Math.max(0, Math.min(seats, 4) - 1));
+  data.companionName = data.companionNames.join("、");
+
   const errors = [];
   const looksLikeLink = (text) => /(https?:|:\/\/|www\.|<|>)/i.test(text);
   if (!data.requestId || !/^[a-zA-Z0-9-]{12,80}$/.test(data.requestId)) errors.push("請求識別碼無效，請重新整理頁面後再送出");
   if (data.eventId !== config.eventId) errors.push("活動識別碼不符，請重新整理頁面後再送出");
   if (data.fullName.length < 2) errors.push("請填寫姓名");
-  if (looksLikeLink(data.fullName) || looksLikeLink(data.companionName)) errors.push("姓名欄位不可包含網址或特殊符號");
-  if (![1, 2].includes(data.seats)) errors.push("參與人數只能是 1 或 2 人");
-  if (data.seats === 2 && data.companionName.length < 2) errors.push("請填寫同行者姓名");
+  if (looksLikeLink(data.fullName) || data.companionNames.some(looksLikeLink)) errors.push("姓名欄位不可包含網址或特殊符號");
+  if (![1, 2, 3, 4].includes(data.seats)) errors.push("參與人數只能是 1 到 4 人");
+  if (data.seats >= 2 && data.companionNames.some((name) => name.length < 2)) errors.push("請填寫每一位同行者姓名");
   if (!/^[+()\-\d\s]{8,30}$/.test(data.phone)) errors.push("聯絡電話格式不正確");
   if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(data.email) || data.email.length > 160) errors.push("電子郵件格式不正確");
   if (!data.ageConfirm) errors.push("請確認年齡與陪同規則");
@@ -321,7 +325,7 @@ function sendConfirmation_(email, fullName, seats, companionName, status, regist
   const resendNote = isResend
     ? "<p style=\"color:#7b541d\">此信箱先前已完成報名，系統不會重複登記；以下為原報名資料。若非本人操作，請忽略此信。</p>"
     : "";
-  const companion = seats === 2 && companionName
+  const companion = seats >= 2 && companionName
     ? `<p><strong>同行者：</strong>${escapeHtml_(companionName)}</p>`
     : "";
   const htmlBody = `

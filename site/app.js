@@ -14,7 +14,7 @@
   const errorSummary = document.getElementById("errorSummary");
   const errorList = document.getElementById("errorList");
   const companionField = document.getElementById("companionField");
-  const companionName = document.getElementById("companionName");
+  const companionInputs = [1, 2, 3].map((n) => document.getElementById(`companionName${n}`));
   const phone = document.getElementById("phone");
   const iframe = document.getElementById("submissionTarget");
   const dialog = document.getElementById("resultDialog");
@@ -85,13 +85,17 @@
   }
 
   function toggleCompanion() {
-    const needsCompanion = selectedSeats() === 2;
-    companionField.hidden = !needsCompanion;
-    companionName.required = needsCompanion;
-    if (!needsCompanion) {
-      companionName.value = "";
-      clearFieldError(companionName);
-    }
+    const needed = selectedSeats() - 1;
+    companionField.hidden = needed < 1;
+    companionInputs.forEach((input, index) => {
+      const active = index < needed;
+      document.getElementById(`companionField${index + 1}`).hidden = !active;
+      input.required = active;
+      if (!active) {
+        input.value = "";
+        clearFieldError(input);
+      }
+    });
     updateProgress();
   }
 
@@ -167,7 +171,7 @@
       document.getElementById("ageConfirm"),
       document.getElementById("privacyConsent")
     ];
-    if (selectedSeats() === 2) controls.push(companionName);
+    controls.push(...companionInputs.slice(0, selectedSeats() - 1));
     return controls;
   }
 

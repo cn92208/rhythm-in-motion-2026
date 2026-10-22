@@ -98,13 +98,7 @@ a:focus-visible, .button:focus-visible { outline: 3px solid var(--focus); outlin
   letter-spacing: .34em;
   color: var(--ink);
 }
-.title-sub::after {
-  content: "";
-  display: block;
-  width: 56px; height: 3px;
-  margin-top: 16px;
-  background: var(--orange);
-}
+.title-sub { margin-bottom: 14px; }
 
 .lede {
   margin: 0 0 30px;
