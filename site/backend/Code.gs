@@ -63,7 +63,7 @@ function getConfig_() {
     allowedOrigin: properties.getProperty("ALLOWED_ORIGIN").replace(/\/+$/, ""),
     capacity: Number(properties.getProperty("CAPACITY") || "70"),
     formStatus: (properties.getProperty("FORM_STATUS") || "CLOSED").toUpperCase(),
-    eventId: properties.getProperty("EVENT_ID") || "rim-2026-11-28",
+    eventId: properties.getProperty("EVENT_ID") || "rim-2026-11-21",
     retentionCutoff: properties.getProperty("RETENTION_CUTOFF") || "2026-12-28T23:59:59+08:00",
     minFillSeconds: Number(properties.getProperty("MIN_FILL_SECONDS") || "4"),
     hourlyLimit: Number(properties.getProperty("HOURLY_LIMIT") || "40"),
@@ -339,7 +339,7 @@ function sendConfirmation_(email, fullName, seats, companionName, status, regist
         <p><strong>報名編號：</strong>${escapeHtml_(registrationCode)}</p>
         <p><strong>參與人數：</strong>${seats} 人</p>
         ${companion}
-        <p><strong>活動時間：</strong>2026/11/28（六）14:00–15:00</p>
+        <p><strong>活動時間：</strong>2026/11/21（六）14:00–15:00</p>
         <p><strong>報到時間：</strong>13:30–13:50</p>
         <p><strong>活動地點：</strong>C-LAB 多功能廳</p>
       </div>
@@ -352,7 +352,7 @@ function sendConfirmation_(email, fullName, seats, companionName, status, regist
     name: "Rhythm in Motion 報名系統",
     subject,
     htmlBody,
-    body: `${isConfirmed ? "正取" : "候補"}｜報名編號 ${registrationCode}\n${statusText}\n活動時間：2026/11/28 14:00–15:00\n報到時間：13:30–13:50`
+    body: `${isConfirmed ? "正取" : "候補"}｜報名編號 ${registrationCode}\n${statusText}\n活動時間：2026/11/21 14:00–15:00\n報到時間：13:30–13:50`
   });
 }
 

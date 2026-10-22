@@ -1,7 +1,7 @@
 (() => {
   "use strict";
 
-  const config = window.RIM_CONFIG || { status: "preview", endpoint: "", capacity: 50, eventId: "rim-2026-11-28", organizerEmail: "" };
+  const config = window.RIM_CONFIG || { status: "preview", endpoint: "", capacity: 50, eventId: "rim-2026-11-21", organizerEmail: "" };
   const form = document.getElementById("registrationForm");
   const submitButton = document.getElementById("submitButton");
   const submitLabel = document.getElementById("submitLabel");
@@ -27,7 +27,7 @@
 
   const state = ["preview", "open", "closed"].includes(config.status) ? config.status : "preview";
   document.body.dataset.registrationState = state;
-  document.getElementById("eventId").value = config.eventId || "rim-2026-11-28";
+  document.getElementById("eventId").value = config.eventId || "rim-2026-11-21";
   document.getElementById("startedAt").value = new Date().toISOString();
 
   function createRequestId() {

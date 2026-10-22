@@ -19,7 +19,7 @@
 | `SHEET_NAME` | `報名資料` | 預設 `報名資料` |
 | `CAPACITY` | `70` | 預設 70 |
 | `FORM_STATUS` | 收件用 `OPEN`；停止收件用 `CLOSED` | 預設 `CLOSED` |
-| `EVENT_ID` | `rim-2026-11-28` | 預設同左 |
+| `EVENT_ID` | `rim-2026-11-21` | 預設同左 |
 | `RETENTION_CUTOFF` | `2026-12-28T23:59:59+08:00` | 預設同左 |
 | `MIN_FILL_SECONDS` | 最短填表秒數，低於此值視為機器人 | 預設 4 |
 | `HOURLY_LIMIT` / `DAILY_LIMIT` | 每小時／每日最多收件數 | 預設 40 / 200 |

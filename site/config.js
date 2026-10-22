@@ -8,7 +8,7 @@ window.RIM_CONFIG = Object.freeze({
   endpoint: "https://script.google.com/macros/s/AKfycbx-R2WKCvgU6pocfrJvj-Ib4Ci4tC2JPK1ByweDl1V66ICeOX3Uw7D1aj71IGca3qsq/exec",
 
   capacity: 70,
-  eventId: "rim-2026-11-28",
+  eventId: "rim-2026-11-21",
   organizerEmail: "yichengstudio@gmail.com",
-  lastUpdated: "2026-10-13"
+  lastUpdated: "2026-10-22"
 });
