@@ -208,7 +208,7 @@
     dialogTitle.textContent = preview ? "預覽流程完成" : "報名資料已送出";
     dialogMessage.textContent = preview
       ? "欄位驗證、送出狀態與完成畫面皆正常；本次資料未傳送、未儲存。正式開放前請設定收件端點。"
-      : payload.message || "登記確認與報名編號只會寄到您填寫的信箱，請查收確認信（含垃圾郵件匣）；抽選結果將於活動開始一週前另行通知。";
+      : payload.message || "登記確認與報名編號只會寄到您填寫的信箱，請查收確認信（含垃圾郵件匣）；入選名單將於 11/14（六）在活動網頁公布，請以報名編號查對。";
     if (payload.registrationCode) {
       confirmationCode.hidden = false;
       confirmationCode.textContent = `報名編號：${payload.registrationCode}`;

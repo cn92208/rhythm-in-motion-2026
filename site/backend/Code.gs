@@ -46,7 +46,7 @@ const COL = {
 const ACTIVE_STATUSES = ["已登記抽選", "正取", "候補", "已報到"];
 const STATUS_REGISTERED = "已登記抽選";
 const NOTE_PENDING_MAIL = "確認信待補寄";
-const GENERIC_OK_MESSAGE = "已收件。登記確認與報名編號將寄至您填寫的信箱，請留意收件匣與垃圾郵件匣；抽選結果將於活動開始一週前另行通知。";
+const GENERIC_OK_MESSAGE = "已收件。登記確認與報名編號將寄至您填寫的信箱，請留意收件匣與垃圾郵件匣；入選名單將於 11/14（六）在活動網頁公布，請以報名編號查對。";
 const GENERIC_ERROR_MESSAGE = "系統暫時無法收件，請稍後再試。";
 
 class ValidationError extends Error {}
@@ -324,7 +324,7 @@ function sendConfirmation_(email, fullName, seats, companionName, status, regist
   const label = isRegistered ? "已登記抽選" : (isConfirmed ? "正取" : "候補");
   const subject = (isRegistered ? "【已登記抽選】" : (isConfirmed ? "【報名成功】" : "【候補通知】")) + `Rhythm in Motion｜${registrationCode}`;
   const statusText = isRegistered
-    ? "您已成功登記抽選。入選名單將於活動開始一週前公布並以 Email 通知；未接獲通知前，請勿視為入選。"
+    ? "您已成功登記抽選。入選名單將於 2026/11/14（六）在活動網頁公布，請以下方報名編號查對；名單公布前，請勿視為入選。"
     : isConfirmed
     ? "您已取得正取席位。請於活動當日 13:50 前完成簽到；逾時席位將釋出予現場候補。"
     : "目前已額滿，您已列入候補。若有席位釋出，主辦人將另行通知；未接獲通知前，請勿視為正取。";
