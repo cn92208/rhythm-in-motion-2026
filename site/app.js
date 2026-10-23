@@ -47,7 +47,7 @@
       statusPill.textContent = "報名開放中";
       modeNotice.hidden = true;
       submitLabel.textContent = "送出報名";
-      submitNote.textContent = "送出後請留意 Email 正取／候補確認信。";
+      submitNote.textContent = "送出後請留意 Email 登記確認信。";
       return;
     }
     if (state === "closed") {
@@ -208,7 +208,7 @@
     dialogTitle.textContent = preview ? "預覽流程完成" : "報名資料已送出";
     dialogMessage.textContent = preview
       ? "欄位驗證、送出狀態與完成畫面皆正常；本次資料未傳送、未儲存。正式開放前請設定收件端點。"
-      : payload.message || "正取／候補結果與報名編號只會寄到您填寫的信箱，請查收確認信（含垃圾郵件匣）。";
+      : payload.message || "登記確認與報名編號只會寄到您填寫的信箱，請查收確認信（含垃圾郵件匣）；抽選結果將於活動開始一週前另行通知。";
     if (payload.registrationCode) {
       confirmationCode.hidden = false;
       confirmationCode.textContent = `報名編號：${payload.registrationCode}`;

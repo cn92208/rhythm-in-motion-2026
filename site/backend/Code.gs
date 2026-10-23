@@ -3,7 +3,8 @@
  *
  * 安全設計重點：
  * - 所有機密（試算表 ID、收件信箱、允許來源）只存在「指令碼屬性」，不進入公開儲存庫。
- * - 對外回應一律「通用訊息」：不在畫面回傳正取／候補、報名編號或任何既有資料，
+ * - 報名採抽選制：新報名一律記為「已登記抽選」，不依先後與席次判定；主辦人抽選後再把狀態改為正取／候補。
+ * - 對外回應一律「通用訊息」：不在畫面回傳狀態、報名編號或任何既有資料，
  *   結果只寄到報名者自己的信箱，避免用表單探測某個 Email 是否已報名。
  * - 系統錯誤不把內部錯誤文字回傳給瀏覽器（只有欄位驗證錯誤會回傳）。
  * - 蜜罐欄位、最短填表時間、每小時／每日收件上限、同 Email 去重，降低垃圾報名與寄信轟炸。
@@ -42,9 +43,10 @@ const COL = {
   source: 16, anonymizedAt: 17, note: 18
 };
 
-const ACTIVE_STATUSES = ["正取", "候補", "已報到"];
+const ACTIVE_STATUSES = ["已登記抽選", "正取", "候補", "已報到"];
+const STATUS_REGISTERED = "已登記抽選";
 const NOTE_PENDING_MAIL = "確認信待補寄";
-const GENERIC_OK_MESSAGE = "已收件。正取／候補結果與報名編號將寄至您填寫的信箱，請留意收件匣與垃圾郵件匣。";
+const GENERIC_OK_MESSAGE = "已收件。登記確認與報名編號將寄至您填寫的信箱，請留意收件匣與垃圾郵件匣；抽選結果將於活動開始一週前另行通知。";
 const GENERIC_ERROR_MESSAGE = "系統暫時無法收件，請稍後再試。";
 
 class ValidationError extends Error {}
@@ -148,7 +150,7 @@ function doPost(event) {
       }
 
       const usedSeats = countConfirmedSeats_(table);
-      const status = usedSeats + data.seats <= config.capacity ? "正取" : "候補";
+      const status = STATUS_REGISTERED;
       const registrationCode = createRegistrationCode_();
       const receivedAt = new Date();
       const rowIndex = sheet.getLastRow() + 1;
@@ -318,8 +320,12 @@ function escapeHtml_(value) {
 
 function sendConfirmation_(email, fullName, seats, companionName, status, registrationCode, config, isResend) {
   const isConfirmed = status === "正取" || status === "已報到";
-  const subject = (isConfirmed ? "【報名成功】" : "【候補通知】") + `Rhythm in Motion｜${registrationCode}`;
-  const statusText = isConfirmed
+  const isRegistered = status === STATUS_REGISTERED;
+  const label = isRegistered ? "已登記抽選" : (isConfirmed ? "正取" : "候補");
+  const subject = (isRegistered ? "【已登記抽選】" : (isConfirmed ? "【報名成功】" : "【候補通知】")) + `Rhythm in Motion｜${registrationCode}`;
+  const statusText = isRegistered
+    ? "您已成功登記抽選。入選名單將於活動開始一週前公布並以 Email 通知；未接獲通知前，請勿視為入選。"
+    : isConfirmed
     ? "您已取得正取席位。請於活動當日 13:50 前完成簽到；逾時席位將釋出予現場候補。"
     : "目前已額滿，您已列入候補。若有席位釋出，主辦人將另行通知；未接獲通知前，請勿視為正取。";
   const resendNote = isResend
@@ -331,7 +337,7 @@ function sendConfirmation_(email, fullName, seats, companionName, status, regist
   const htmlBody = `
     <div style="font-family:Arial,'Microsoft JhengHei',sans-serif;line-height:1.7;color:#292824;max-width:620px;margin:auto">
       <p style="letter-spacing:.12em;color:#b95735;font-weight:bold">RHYTHM IN MOTION</p>
-      <h1 style="font-size:24px">${escapeHtml_(isConfirmed ? "正取" : "候補")}｜把節奏裝進身體</h1>
+      <h1 style="font-size:24px">${escapeHtml_(label)}｜把節奏裝進身體</h1>
       <p>${escapeHtml_(fullName)} 您好：</p>
       ${resendNote}
       <p>${statusText}</p>
@@ -352,7 +358,7 @@ function sendConfirmation_(email, fullName, seats, companionName, status, regist
     name: "Rhythm in Motion 報名系統",
     subject,
     htmlBody,
-    body: `${isConfirmed ? "正取" : "候補"}｜報名編號 ${registrationCode}\n${statusText}\n活動時間：2026/11/21 14:00–15:00\n報到時間：13:30–13:50`
+    body: `${label}｜報名編號 ${registrationCode}\n${statusText}\n活動時間：2026/11/21 14:00–15:00\n報到時間：13:30–13:50`
   });
 }
 
@@ -360,7 +366,7 @@ function sendOrganizerNotice_(status, registrationCode, seats, usedSeats, config
   // 資料最小化：通知信不含姓名、電話、Email；完整資料請到試算表查看。
   const confirmedAfter = status === "正取" ? usedSeats + seats : usedSeats;
   const subject = `【新報名／${status}】${registrationCode}`;
-  const body = `狀態：${status}\n報名編號：${registrationCode}\n參與人數：${seats}\n正取已用席次：${confirmedAfter} / ${config.capacity}\n\n完整資料請至報名試算表查看。`;
+  const body = `狀態：${status}\n報名編號：${registrationCode}\n參與人數：${seats}\n正取已用席次：${confirmedAfter} / ${config.capacity}（抽選前皆為 0）\n\n完整資料請至報名試算表查看。`;
   MailApp.sendEmail({ to: config.organizerEmail, subject, body });
 }
 
