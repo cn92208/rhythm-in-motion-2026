@@ -1,0 +1,172 @@
+/*
+ * Rhythm in Motion — shared theme (poster style)
+ * Aged paper, ink-black distressed serif, thin vermilion rules.
+ * Fonts are self-hosted subsets of Noto Serif CJK TC (OFL, see fonts/OFL.txt);
+ * no third-party requests, so the CSP font-src 'self' still holds.
+ */
+@font-face { font-family: "RIM Serif"; src: url("fonts/rim-serif-Regular.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: "RIM Serif"; src: url("fonts/rim-serif-Bold.woff2") format("woff2"); font-weight: 700; font-style: normal; font-display: swap; }
+@font-face { font-family: "RIM Serif"; src: url("fonts/rim-serif-Black.woff2") format("woff2"); font-weight: 900; font-style: normal; font-display: swap; }
+
+:root {
+  color-scheme: light;
+  --paper: #e9e0cf;
+  --paper-light: #f1eadc;
+  --paper-deep: #ddd2bd;
+  --ink: #1c1915;
+  --ink-soft: #3a342c;
+  --muted: #5e5549;
+  --quiet: #7a705f;
+  --line: rgba(28, 25, 21, .22);
+  --line-strong: rgba(28, 25, 21, .55);
+  --red: #b23a2b;
+  --red-dark: #8e2c20;
+  --red-soft: rgba(178, 58, 43, .1);
+  --ok: #4d5e3f;
+  --warn: #7b541d;
+  --focus: #b23a2b;
+  --serif: "RIM Serif", "Noto Serif TC", "Source Han Serif TC", "Songti TC", "PMingLiU", "MingLiU", Georgia, "Times New Roman", serif;
+  --track: .12em;
+
+  /* paper grain + uneven tone, both generated in-browser (no image files) */
+  --grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='260' height='260'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .28 0 0 0 0 .22 0 0 0 0 .15 0 0 0 .32 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  --stain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='1600' preserveAspectRatio='none'%3E%3Cfilter id='s'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.003' numOctaves='4' seed='7' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .45 0 0 0 0 .36 0 0 0 0 .22 0 0 0 .55 -.18'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23s)'/%3E%3C/svg%3E");
+  /* worn-ink mask for display type: mostly solid with small dropouts */
+  --wear: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='320' height='320'%3E%3Cfilter id='w'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.7' numOctaves='3' seed='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -16 0 0 0 12.6'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23w)'/%3E%3C/svg%3E");
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; background: var(--paper); }
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  color: var(--ink);
+  font-family: var(--serif);
+  font-weight: 400;
+  line-height: 1.8;
+  letter-spacing: .04em;
+  -webkit-font-smoothing: antialiased;
+  background-color: var(--paper);
+  background-image:
+    var(--grain),
+    radial-gradient(120% 90% at 50% 40%, transparent 55%, rgba(120, 92, 58, .22) 100%),
+    var(--stain),
+    linear-gradient(180deg, var(--paper-light), var(--paper) 40%, var(--paper-deep));
+  background-size: 260px 260px, 100% 100%, 100% 100%, 100% 100%;
+  background-repeat: repeat, no-repeat, no-repeat, no-repeat;
+  
+}
+a { color: inherit; text-underline-offset: .25em; text-decoration-thickness: 1px; }
+a:hover { color: var(--red); }
+:focus-visible { outline: 2px solid var(--focus); outline-offset: 3px; }
+img, svg { max-width: 100%; }
+[hidden] { display: none !important; }
+h1, h2, h3, p { text-wrap: pretty; }
+
+.skip-link {
+  position: fixed; left: 16px; top: 12px; z-index: 100;
+  width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap;
+  padding: 10px 14px; background: var(--ink); color: var(--paper-light); font-weight: 700;
+}
+.skip-link:focus { width: auto; height: auto; clip-path: none; }
+
+/* ---------- Shared typographic pieces ---------- */
+.worn {
+  -webkit-mask-image: var(--wear);
+  mask-image: var(--wear);
+  -webkit-mask-size: 320px 320px;
+  mask-size: 320px 320px;
+}
+.kicker {
+  margin: 0 0 10px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .42em;
+  text-transform: uppercase;
+  color: var(--red);
+}
+.rule {
+  display: block;
+  width: 56px;
+  height: 0;
+  margin: 26px 0;
+  border: 0;
+  border-top: 2px solid var(--red);
+}
+.rule.long { width: min(100%, 520px); }
+
+/* Buttons: a stamped ink block with an inner hairline; turns vermilion on hover */
+.button, .btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: .5em;
+  min-height: 56px;
+  padding: 14px 34px;
+  border: 2px solid var(--ink);
+  background: var(--ink);
+  color: var(--paper-light);
+  font-family: var(--serif);
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: .32em;
+  text-indent: .32em;
+  text-decoration: none;
+  box-shadow: inset 0 0 0 3px var(--ink), inset 0 0 0 4px rgba(241, 234, 220, .55);
+  cursor: pointer;
+  transition: background .15s ease, border-color .15s ease, box-shadow .15s ease, transform .15s ease;
+}
+.button:hover, .btn:hover {
+  color: var(--paper-light);
+  background: var(--red);
+  border-color: var(--red);
+  box-shadow: inset 0 0 0 3px var(--red), inset 0 0 0 4px rgba(241, 234, 220, .6);
+}
+.button:active, .btn:active { transform: translateY(1px); }
+.btn-ghost {
+  background: transparent;
+  color: var(--ink);
+  box-shadow: none;
+}
+.btn-ghost:hover { background: var(--ink); border-color: var(--ink); color: var(--paper-light); box-shadow: none; }
+.text-link {
+  font-size: 15px; font-weight: 700; letter-spacing: .12em;
+  text-decoration: underline; text-decoration-color: var(--red); text-underline-offset: .4em;
+}
+
+/* Small "!" in a vermilion ring, as on the poster */
+.bang {
+  flex: none;
+  display: inline-grid; place-items: center;
+  width: 30px; height: 30px;
+  border: 2px solid var(--red);
+  border-radius: 50%;
+  color: var(--red);
+  font-size: 16px; font-weight: 900; line-height: 1;
+  letter-spacing: 0;
+}
+
+.visually-hidden {
+  position: absolute !important; width: 1px !important; height: 1px !important; padding: 0 !important; margin: -1px !important;
+  overflow: hidden !important; clip: rect(0, 0, 0, 0) !important; white-space: nowrap !important; border: 0 !important;
+}
+
+/* Shared footer */
+.foot {
+  display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 8px 24px;
+  width: min(100%, 1120px); margin: 0 auto;
+  padding: 18px clamp(20px, 5vw, 72px) 30px;
+  border-top: 1px solid var(--line-strong);
+  font-size: 13px; letter-spacing: .14em; color: var(--muted);
+}
+.foot-link { color: var(--ink); text-decoration: none; font-weight: 700; }
+.foot-link:hover { color: var(--red); }
+
+@media (max-width: 520px) {
+  .button, .btn { width: 100%; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; }
+}
+@media print {
+  body { background: #fff; }
+}

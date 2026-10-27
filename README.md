@@ -91,7 +91,8 @@ Word 文件由 `docx` 產生。Windows 有 Microsoft Word 時，可用 `verifica
 
 ## 資料與隱私
 
-- GitHub Pages 只包含前端，不保存個資；頁面不載入任何第三方資源（無字型、無分析工具、無 CDN）。
+- GitHub Pages 只包含前端，不保存個資；頁面不載入任何第三方資源（無第三方字型服務、無分析工具、無 CDN）。
+- 2026-10-27 依海報重新設計美術：共用樣式在 `site/theme.css`（紙張紋理、朱紅細線、黑色印刷感按鈕）。字型為自架的 Noto Serif CJK TC 子集（`site/fonts/`，SIL OFL 1.1），只含網站用到的字；**修改頁面文字後請執行 `python scripts/subset-fonts.py` 重建字型**，否則新增的字會以系統字型顯示。
 - 正式資料寫入主辦人指定的 Google 試算表；報名結果只寄到報名者信箱，畫面不顯示。
 - 試算表不得設為公開連結可檢視；主辦帳號應開啟兩步驟驗證。
 - 活動後 30 日內由 Apps Script 清除姓名、同行者、電話、Email、協助需求與提問；Gmail 內的信件副本需由主辦人手動刪除。
